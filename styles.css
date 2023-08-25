@@ -1,0 +1,127 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f8f8;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+header, main, footer {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    padding-top: 40px;
+}
+
+/* Interactive UI Elements */
+.interactive-elements {
+    display: flex;
+    justify-content: space-around;
+    padding: 50px 0;
+}
+
+.fade-btn, .slide-btn, .rotate-btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007BFF;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    outline: none;
+}
+
+.fade-btn:hover {
+    opacity: 0.6;
+}
+
+.slide-btn:hover {
+    transform: translateX(20px);
+}
+
+.rotate-btn:hover {
+    transform: rotate(90deg);
+}
+
+/* Pseudo-elements */
+.pseudo-elements {
+    text-align: center;
+    padding: 50px 0;
+}
+
+.decorative-divider {
+    position: relative;
+    display: inline-block;
+}
+
+.decorative-divider::before,
+.decorative-divider::after {
+    content: "";
+    height: 2px;
+    background-color: #007BFF;
+    position: absolute;
+    top: 50%;
+    width: 50px;
+}
+
+.decorative-divider::before {
+    left: -60px;
+}
+
+.decorative-divider::after {
+    right: -60px;
+}
+
+/* 3D Elements */
+.card {
+    perspective: 1000px;
+    margin: 0 auto;
+    width: 120px;
+}
+
+.card-inner {
+    width: 100%;
+    height: 120px;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.6s cubic-bezier(0.38, 0.8, 0.32, 1.07);
+}
+
+.card:hover .card-inner {
+    transform: rotateY(180deg);
+}
+
+.card-front, .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backface-visibility: hidden;
+    background: #007BFF;
+    color: white;
+    border-radius: 10px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.card-back {
+    transform: rotateY(180deg);
+    background: #FF5733;
+}
+
+/* Custom Cursors */
+.custom-cursor-zone {
+    cursor: url('custom-cursor.png'), auto;
+    height: 100vh;
+    padding-bottom: 40px;
+}
+
+footer {
+    text-align: center;
+    padding-top: 40px;
+}
